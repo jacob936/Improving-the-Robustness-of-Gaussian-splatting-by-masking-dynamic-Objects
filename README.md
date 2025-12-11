@@ -227,6 +227,7 @@ gaussian-splatting/
 │   └── figure_l1_error_comparison.png
 
 ├── notebooks/               # Colab notebook
+├── images_and_videos
 ├── requirements.txt         # Dependencies
 └── README.md               # This file
  ```
