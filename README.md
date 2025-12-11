@@ -19,11 +19,11 @@ The project's hypothesis is that both methods will significantly reduce artifact
 
 ## Demonstration (Video)
 
-A video demonstrating the results of our project can be found here: [Link to Video]
+A video demonstrating the results of our project can be found here: (https://github.com/jacob936/Improving-the-Robustness-of-Gaussian-splatting-by-masking-dynamic-Objects/blob/main/Image%20and%20Videos/VID-20251210-WA0017.mp4)
 
 You can also find a GIF animation of the results below:
 
-![GIF of results](link_to_your_gif.gif)
+![GIF of results](https://github.com/jacob936/Improving-the-Robustness-of-Gaussian-splatting-by-masking-dynamic-Objects/blob/main/Image%20and%20Videos/masks.gif)
 
 ## Installation and Deployment
 
@@ -81,8 +81,6 @@ Here are the instructions to run the different parts of the project.
 Skip Gaussians projecting into dynamic regions during rasterization.
 ## THEORETICAL BACKGROUND:
 
-(i) a compact 3DGS rendering model, (ii) masked loss formulations, and (iii) explicit metric definitions and ray-filtering equations.[^1][^2]
-
 ## 3D Gaussian Splatting model
 
 A 3D Gaussian $\mathcal{G}_i$ is defined by mean $\mu_i \in \mathbb{R}^3$, covariance $\Sigma_i \in \mathbb{R}^{3 \times 3}$, color $c_i \in \mathbb{R}^3$ and opacity $\alpha_i \in [0,1]$. For a camera with projection $\Pi$, the Gaussian is approximated in the image plane as a 2D Gaussian[^2]
@@ -105,7 +103,7 @@ $$
 T_i(u) = \prod_{j < i} \bigl(1 - \alpha_j(u)\bigr),
 $$
 
-where $\tau$ is a scaling factor controlling opacity.[^2][^1]
+where $\tau$ is a scaling factor controlling opacity.
 
 ## Photometric loss without masking
 
