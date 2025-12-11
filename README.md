@@ -228,18 +228,11 @@ A brief summary of the results shows that both the loss masking and ray filterin
 | Ray Filtering | 0.0000 | 9.04 | 107x |
 
 ## Description of the Obtained Results
-The results of our experiments, including the trained models, rendered images, and performance metrics, are available in the following #cloud storage folder:
+The results of our experiments, including the trained models, rendered images, and performance metrics, are available in the results folder.
 - Static L1 Error: 0.1067 → 0.0000 (107x reduction)
 - PSNR: 9.00 → 18.35 dB (2x improvement)
 - Training: 7000 iterations, 16 Gaussians (fixed)
 Demonstrates 107x static artifact reduction using 2D semantic masks in 3D Gaussian Splatting training.
-
-## Status
-Sections 1-7 COMPLETE (95% done)
-Dataset generated (PyBullet)
-All models trained
-Metrics & figures generated
-Ready for paper writing
 
 ## References
 - Kerbl et al. (2023). 3D Gaussian Splatting
@@ -267,4 +260,4 @@ Ready for paper writing
 [20](https://github.com/graphdeco-inria/gaussian-splatting)
 
 ---
-Prince Alex | Dec 2025 | Hypothesis PROVEN
+| Dec 2025 | Hypothesis PROVEN
