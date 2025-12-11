@@ -74,11 +74,10 @@ Here are the instructions to run the different parts of the project.
 **Strategy 2: Ray Filtering:**
 
     ```bash
-    python train_ray_filter.py -s /3dgs-dynamic-masking-47/data/generated -m /path/to/output/ray_filter --iterations 5000 --mask_dir /3dgs-dynamic-masking-47/data/generated/masks
+    python train_ray_filter.py -s /3dgs-dynamic-masking-47/data/generated -m /3dgs-dynamic-masking-47/output/ray_filter --iterations 5000 --mask_dir /3dgs-dynamic-masking-47/data/generated/masks
     ```
     *Note: The training scripts `train_loss_mask.py` and `train_ray_filter.py` are modified versions of the original `train.py` script from the 3DGS repository.*
 
-Skip Gaussians projecting into dynamic regions during rasterization.
 ## THEORETICAL BACKGROUND:
 
 ## 3D Gaussian Splatting model
@@ -199,7 +198,21 @@ computed over local windows and averaged.[^4]
 The folder is structured as follows:
 ### Project Structure
  ```
-3dgs-dynamic-masking-47/
+data/
+├──pybullet_dataset
+├──raw_dataset
+
+gaussian-splatting/
+├──assets
+├──.git
+├──arguments
+├──gaussian_renderer
+├──IpipsPyTorch
+├──utils
+├──submodules
+├──SIBR_viewers
+
+3dgs-dynamic-masking/
 ├── data/generated/          # PyBullet dataset-Contains the synthetic dataset used for training and evaluation.
 │   ├── images/             # 30 RGB frames
 │   ├── masks/              # Binary masks
@@ -212,12 +225,11 @@ The folder is structured as follows:
 │   ├── metrics_comparison.csv - A CSV file with the PSNR, SSIM, and LPIPS scores for all three models.
 │   ├── figure_psnr_comparison.png - Side-by-side comparison images of the rendered views.
 │   └── figure_l1_error_comparison.png
+
 ├── notebooks/               # Colab notebook
-├── src/                     # Custom scripts
 ├── requirements.txt         # Dependencies
 └── README.md               # This file
  ```
-
 ### Results
 A brief summary of the results shows that both the loss masking and ray filtering strategies outperform the baseline model in terms of artifact reduction and overall visual quality. The quantitative metrics in `metrics_comparison.csv` provide a detailed comparison of the performance of the three models.
 ## Key Results
