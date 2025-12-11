@@ -83,7 +83,7 @@ Skip Gaussians projecting into dynamic regions during rasterization.
 
 ## 3D Gaussian Splatting model
 
-A 3D Gaussian $\mathcal{G}_i$ is defined by mean $\mu_i \in \mathbb{R}^3$, covariance $\Sigma_i \in \mathbb{R}^{3 \times 3}$, color $c_i \in \mathbb{R}^3$ and opacity $\alpha_i \in [0,1]$. For a camera with projection $\Pi$, the Gaussian is approximated in the image plane as a 2D Gaussian[^2]
+A 3D Gaussian $\mathcal{G}_i$ is defined by mean $\mu_i \in \mathbb{R}^3$, covariance $\Sigma_i \in \mathbb{R}^{3 \times 3}$, color $c_i \in \mathbb{R}^3$ and opacity $\alpha_i \in [0,1]$. For a camera with projection $\Pi$, the Gaussian is approximated in the image plane as a 2D Gaussian[^1][^2]
 
 $$
 \tilde{\mathcal{G}}_i(u) = \exp\!\left(-\tfrac{1}{2}(u - \tilde{\mu}_i)^\top \tilde{\Sigma}_i^{-1} (u - \tilde{\mu}_i)\right),
